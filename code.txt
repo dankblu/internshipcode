@@ -14,8 +14,6 @@ FROM `data-to-insights.ecommerce.web_analytics`
 WHERE totals.transactions IS NOT NULL
 )
 
------------------------------------------------------------
-
 SELECT
   total_visitors,
   total_purchasers,
