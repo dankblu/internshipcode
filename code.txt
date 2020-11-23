@@ -48,14 +48,13 @@ SELECT
   GROUP BY fullvisitorid
 )
 
-
------------------------------------------------------------
-
 SELECT
   COUNT(DISTINCT fullvisitorid) AS total_visitors,
   will_buy_on_return_visit
 FROM all_visitor_stats
 GROUP BY will_buy_on_return_visit
+
+-------------------------------------------------------------
 
 SELECT
   * EXCEPT(fullVisitorId)
@@ -80,8 +79,11 @@ FROM
   USING (fullVisitorId)
 ORDER BY time_on_site DESC
 LIMIT 10;
-
 -----------------------------------------------------------
+Create Data Set
+-----------------------------------------------------------
+Selecting a BQML model
+
 
 CREATE OR REPLACE MODEL `ecommerce.classification_model`
 OPTIONS
